@@ -1,0 +1,147 @@
+#: kivy 1.9.0
+
+<Menu>:
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'image/IO.png'
+
+    BoxLayout:
+        orientation: 'vertical'
+        pos: root.pos
+        size: root.size
+
+        MenuLabelXL:
+            text: 'Operation IO'
+        MenuLabel:
+            text: ''
+
+        MenuButton:
+            text: 'EASY'
+            on_press: root.start_easy(root)
+        MenuButton:
+            text: 'MEDIUM'
+            on_press: root.start_med(root)
+        MenuButton:
+            text: 'HARD'
+            on_press: root.start_hard(root)
+        MenuLabel:
+            text: ''
+        MenuButton:
+            text: 'HIGHSCORE'
+            on_press: root.show_highscore(root)
+       
+       
+<Highscores>:
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'image/IO.png'
+    GridLayout:
+        size: root.size
+        pos: root.pos
+        cols: 3
+        rows: 12
+
+        MenuLabelXL:
+            text: 'RANK'
+        MenuLabelXL:
+            text: 'NAME'
+        MenuLabelXL:
+            text: 'SCORE'
+        MenuLabel:
+            text: '1'
+        MenuLabel:
+            text: str(root.no1_Name)
+        MenuLabel:
+            text: str(root.no1_Score)
+        MenuLabel:
+            text: '2'
+        MenuLabel:
+            text: str(root.no2_Name)
+        MenuLabel:
+            text: str(root.no2_Score)
+        MenuLabel:
+            text: '3'
+        MenuLabel:
+            text: str(root.no3_Name)
+        MenuLabel:
+            text: str(root.no3_Score)
+        MenuLabel:
+            text: '4'
+        MenuLabel:
+            text: str(root.no4_Name)
+        MenuLabel:
+            text: str(root.no4_Score)
+        MenuLabel:
+            text: '5'
+        MenuLabel:
+            text: str(root.no5_Name)
+        MenuLabel:
+            text: str(root.no5_Score)
+        MenuLabel:
+            text: '6'
+        MenuLabel:
+            text: str(root.no6_Name)
+        MenuLabel:
+            text: str(root.no6_Score)
+        MenuLabel:
+            text: '7'
+        MenuLabel:
+            text: str(root.no7_Name)
+        MenuLabel:
+            text: str(root.no7_Score)
+        MenuLabel:
+            text: '8'
+        MenuLabel:
+            text: str(root.no8_Name)
+        MenuLabel:
+            text: str(root.no8_Score)
+        MenuLabel:
+            text: '9'
+        MenuLabel:
+            text: str(root.no9_Name)
+        MenuLabel:
+            text: str(root.no9_Score)
+        MenuLabel:
+            text: '10'
+        MenuLabel:
+            text: str(root.no10_Name)
+        MenuLabel:
+            text: str(root.no10_Score)
+        MenuButton:
+            id: menu_button
+            text: 'MENU'
+
+
+<Game>:
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'image/IO.png'
+
+<MenuLabelXL>:
+    font_size: '40sp'
+
+<MenuLabel>:
+    size: self.size
+    font_size: '25sp'
+
+<MenuButton>:
+    font_size: '25sp'
+    background_color: [0,0,0,0]
+
+<Expression>
+    font_size: '25sp'
+
+<Texter>:
+    font_size: '30sp'
+    text: 'Enter your name'
+    multiline: False
+    halign: 'center'
+    selection_color: [0.1,1,0.1,0.5]
+    foreground_color: [1,1,1,1]
+    background_color: [0,0,0,0]
